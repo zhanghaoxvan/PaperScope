@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PaperScope Theme Example</title>
+
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- PaperScope Theme -->
+  <link rel="stylesheet" href="tmp.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <a href="#" class="site-brand">Paper<span class="accent">Scope</span></a>
+    <nav class="site-nav">
+      <a href="#"><i class="fa-regular fa-pen-to-square"></i> Blog</a>
+      <a href="#"><i class="fa-regular fa-folder"></i> Projects</a>
+      <a href="#"><i class="fa-regular fa-file-lines"></i> Docs</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== Content ===== -->
+  <main class="content">
+
+    <!-- Hero -->
+    <h1>Welcome to PaperScope</h1>
+    <p>
+      <i class="fa-regular fa-gem" style="color: var(--accent);"></i>
+      A clean, paper-textured theme for personal websites and project documentation.
+    </p>
+
+    <hr />
+
+    <!-- Cards -->
+    <h2>Cards</h2>
+    <div class="card">
+      <h3><i class="fa-regular fa-credit-card"></i> Card Title</h3>
+      <p>Soft shadow, lifts on hover, paper-like texture.</p>
+      <span class="tag"><i class="fa-solid fa-tag"></i> Rust</span>
+      <span class="tag tag-accent"><i class="fa-solid fa-tag"></i> Qt</span>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-regular fa-user"></i> About Me</h3>
+      <p>Developer, open-source contributor, Rust enthusiast.</p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+
+    <hr />
+
+    <!-- Buttons -->
+    <h2>Buttons</h2>
+    <p>
+      <a href="#" class="btn"><i class="fa-solid fa-arrow-right"></i> Primary</a>
+      <a href="#" class="btn btn-accent"><i class="fa-regular fa-star"></i> Accent</a>
+    </p>
+
+    <hr />
+
+    <!-- Tags -->
+    <h2>Tags</h2>
+    <p>
+      <span class="tag">Technology</span>
+      <span class="tag">Open Source</span>
+      <span class="tag tag-accent">Featured</span>
+      <span class="tag tag-accent">Popular</span>
+    </p>
+
+    <hr />
+
+    <!-- Code Blocks -->
+    <h2>Code Blocks</h2>
+    <p>macOS-style with traffic lights and copy button.</p>
+
+    <!-- Rust Example -->
+    <div class="code-block-wrapper">
+      <div class="code-header">
+        <div class="code-dots">
+          <span class="code-dot code-dot-red"></span>
+          <span class="code-dot code-dot-yellow"></span>
+          <span class="code-dot code-dot-green"></span>
+        </div>
+        <div class="code-actions">
+          <span class="code-lang"><i class="fa-solid fa-code"></i> Rust</span>
+          <button class="code-copy-btn" aria-label="Copy code">
+            <i class="fa-regular fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+      <pre><code class="language-rust">use std::fs;
+
+fn main() -> Result<(), Box&lt;dyn std::error::Error&gt;> {
+    let contents = fs::read_to_string("hello.txt")?;
+    println!("{}", contents);
+    Ok(())
+}</code></pre>
+    </div>
+
+    <!-- JavaScript Example -->
+    <div class="code-block-wrapper">
+      <div class="code-header">
+        <div class="code-dots">
+          <span class="code-dot code-dot-red"></span>
+          <span class="code-dot code-dot-yellow"></span>
+          <span class="code-dot code-dot-green"></span>
+        </div>
+        <div class="code-actions">
+          <span class="code-lang"><i class="fa-solid fa-code"></i> JavaScript</span>
+          <button class="code-copy-btn" aria-label="Copy code">
+            <i class="fa-regular fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+      <pre><code class="language-javascript">function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet("PaperScope"));</code></pre>
+    </div>
+
+    <!-- CSS Example -->
+    <div class="code-block-wrapper">
+      <div class="code-header">
+        <div class="code-dots">
+          <span class="code-dot code-dot-red"></span>
+          <span class="code-dot code-dot-yellow"></span>
+          <span class="code-dot code-dot-green"></span>
+        </div>
+        <div class="code-actions">
+          <span class="code-lang"><i class="fa-solid fa-code"></i> CSS</span>
+          <button class="code-copy-btn" aria-label="Copy code">
+            <i class="fa-regular fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+      <pre><code class="language-css">.code-block-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    background: #1e1e2e;
+    overflow: hidden;
+}</code></pre>
+    </div>
+
+    <hr />
+
+    <!-- Blockquote -->
+    <h2>Blockquote</h2>
+    <blockquote>
+        PaperScope is designed to be simple, beautiful, and functional.
+        It works for both personal blogs and technical documentation.
+    </blockquote>
+
+    <hr />
+
+    <!-- Lists -->
+    <h2>Lists</h2>
+    <ul>
+      <li>Clean typography with Inter font</li>
+      <li>Dark mode with system preference detection</li>
+      <li>macOS-style code blocks with copy support</li>
+      <li>Fully responsive on all devices</li>
+    </ul>
+
+    <hr />
+
+    <!-- Table -->
+    <h2>Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Supported</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dark Mode</td>
+          <td>Yes</td>
+          <td>Auto + manual toggle</td>
+        </tr>
+        <tr>
+          <td>Code Copy</td>
+          <td>Yes</td>
+          <td>Clipboard API + fallback</td>
+        </tr>
+        <tr>
+          <td>Print Styles</td>
+          <td>Yes</td>
+          <td>Optimized for printing</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <span><i class="fa-regular fa-copyright"></i> 2026 Your Name</span>
+    <span>Built with <i class="fa-regular fa-file-lines"></i> PaperScope</span>
+  </footer>
+
+  <!-- ===== highlight.js ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/rust.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      hljs.highlightAll();
+    });
+  </script>
+
+  <!-- ===== PaperScope ===== -->
+  <script src="tmp.js"></script>
+
+</body>
+</html>
