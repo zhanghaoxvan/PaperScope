@@ -84,7 +84,7 @@
         await navigator.clipboard.writeText(text);
         copyBtn.classList.add('copied');
         const originalText = copyBtn.innerHTML;
-        copyBtn.innerHTML = '<i class="fa-regular fa-check"></i> 已复制';
+        copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied';
 
         setTimeout(function () {
           copyBtn.classList.remove('copied');
@@ -102,7 +102,7 @@
           document.execCommand('copy');
           copyBtn.classList.add('copied');
           const originalText = copyBtn.innerHTML;
-          copyBtn.innerHTML = '<i class="fa-regular fa-check"></i> Copied';
+          copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied';
           setTimeout(function () {
             copyBtn.classList.remove('copied');
             copyBtn.innerHTML = originalText;
