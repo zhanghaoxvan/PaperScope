@@ -70,6 +70,35 @@
     initTheme();
   }
 
+  // 自动展开 code-block 短标签
+  document.querySelectorAll('code-block').forEach(el => {
+    const title = el.getAttribute('title') || '';
+    const lang = el.getAttribute('lang') || 'text';
+    const code = el.textContent.trim();
+    
+    const wrapper = document.createElement('div');
+    wrapper.className = 'code-block-wrapper';
+    wrapper.innerHTML = `
+      <div class="code-header">
+        <div class="code-dots">
+          <span class="code-dot code-dot-red"></span>
+          <span class="code-dot code-dot-yellow"></span>
+          <span class="code-dot code-dot-green"></span>
+        </div>
+        <span class="code-title">${title}</span>
+        <div class="code-actions">
+          <span class="code-lang"><i class="fa-solid fa-code"></i> ${lang}</span>
+          <button class="code-copy-btn" aria-label="Copy code">
+            <i class="fa-solid fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+      <pre><code class="language-${lang}">${code}</code></pre>
+    `;
+    
+    el.replaceWith(wrapper);
+  });
+
   document.querySelectorAll('.code-block-wrapper').forEach(function (wrapper) {
     const copyBtn = wrapper.querySelector('.code-copy-btn');
     if (!copyBtn) return;
